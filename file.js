@@ -16,3 +16,8 @@ const fs=require('fs')
 // )
 
 // console.log(res);
+
+
+fs.appendFileSync('./test.txt',new Date().getDate().toLocaleString());
+
+console.log(fs.statSync('./test.txt'))
