@@ -6,6 +6,13 @@ const fs=require('fs')
 
 // console.log(res);
 
-const res=fs.readFile('./test.txt','binary')
+// fs.readFile('./test.txt','utf-8',(err,result)=>{
+//     if(err){
+//         console.log(err);
+//     } else{
+//         console.log(result);
+//     }
+// }
+// )
 
-console.log(res);
+// console.log(res);
