@@ -15,11 +15,11 @@
 
 const http=require('http')
 
-const myServer=http.createServer((req,res)=>{
-    console.log("New request received");
-    res.end('hello from server');
-})
+// const myServer=http.createServer((req,res)=>{
+//     console.log("New request received");
+//     res.end('hello from server');
+// })
 
 
-myServer.listen(8000,()=>console.log(`Server started
-    http://localhost:8000/`));
+// myServer.listen(8000,()=>console.log(`Server started
+//     http://localhost:8000/`));
