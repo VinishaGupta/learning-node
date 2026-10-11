@@ -17,8 +17,9 @@ const http=require('http')
 
 const myServer=http.createServer((req,res)=>{
     console.log("New request received");
-    console.log('hello from server');
+    res.end('hello from server');
 })
 
 
-myServer.listen(8000,()=>("Server started"));
+myServer.listen(8000,()=>console.log(`Server started
+    http://localhost:8000/`));
