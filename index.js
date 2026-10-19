@@ -14,7 +14,7 @@
 
 
 const http=require('http')
-
+const fs=require('fs')
 // const myServer=http.createServer((req,res)=>{
 //     console.log("New request received");
 //     res.end('hello from server');
@@ -23,3 +23,13 @@ const http=require('http')
 
 // myServer.listen(8000,()=>console.log(`Server started
 //     http://localhost:8000/`));
+
+const myServer=http.createServer((req,res)=>{
+    const date=`${Date.now()}: 'new request received \n'`
+    fs.appendFile("entry-log.txt",date,(err,data)=>{
+        res.end("hello again")
+    })
+    res.end("hello")
+})
+
+myServer.listen(8000,()=>console.log("port started"))
