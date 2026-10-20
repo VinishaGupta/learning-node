@@ -1,8 +1,8 @@
 const http=require('http')
 
-const myServer=http.createServer((res,req)=>{
+const myServer=http.createServer((req,res)=>{
     res.end('hello')
-    console.log(req);
+    console.log('abc');
 })
 
 myServer.listen(8000,()=>{
