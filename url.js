@@ -15,6 +15,8 @@ const myServer=http.createServer((req,res)=>{
             const search=myUrl.query.search;
             res.end("this is "+search)
             break;
+        default:
+            res.end("404 Not Found")
     }
 })
 
