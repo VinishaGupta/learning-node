@@ -12,7 +12,7 @@ const myServer=http.createServer((req,res)=>{
             res.end("About Page")
             break;
         case "/search":
-            const search=myUrl.query.search_query;
+            const search=myUrl.searchParams.get("search_query");
             res.end("this is "+search)
             break;
         default:
