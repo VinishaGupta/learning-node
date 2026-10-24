@@ -10,6 +10,11 @@ const myServer=http.createServer((req,res)=>{
             break;
         case "/about":
             res.end("About Page")
+            break;
+        case "/search":
+            const search=myUrl.query.search;
+            res.end("this is "+search)
+            break;
     }
 })
 
