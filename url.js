@@ -2,9 +2,10 @@ const http=require('http')
 const url=require('url')
 
 const myServer=http.createServer((req,res)=>{
-    const myUrl=url.parse(req.url);
+    if(req.url==='/favicon.ico') return res.end();
+    const myUrl=url.parse(req.url,true);
     console.log(myUrl);
-    switch(req.url){
+    switch(myUrl.pathname){
         case "/":
             res.end("Home Page");
             break;
@@ -12,7 +13,7 @@ const myServer=http.createServer((req,res)=>{
             res.end("About Page")
             break;
         case "/search":
-            const search=myUrl.searchParams.get("search_query");
+            const search=myUrl.query.search_query;
             res.end("this is "+search)
             break;
         default:
